@@ -12,5 +12,11 @@ class DisplayFPSViewController: UIViewController {
     
     @IBOutlet weak var display: UILabel!
     
+    var game: String?
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        display.text = game
+    }
     
 }
