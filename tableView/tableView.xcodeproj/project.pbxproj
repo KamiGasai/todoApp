@@ -13,6 +13,8 @@
 		D28CA59E2054EAB800C03A14 /* tableViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D28CA59D2054EAB800C03A14 /* tableViewTests.swift */; };
 		D28CA5A92054EB2C00C03A14 /* tableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D28CA5A82054EB2C00C03A14 /* tableViewController.swift */; };
 		D28CA5AB2054EC2600C03A14 /* MainTableView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D28CA5AA2054EC2600C03A14 /* MainTableView.storyboard */; };
+		D28CA5AD2055031400C03A14 /* DisplayFpsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D28CA5AC2055031400C03A14 /* DisplayFpsViewController.swift */; };
+		D28CA5B320550B9E00C03A14 /* fpsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D28CA5B220550B9E00C03A14 /* fpsCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +38,8 @@
 		D28CA59F2054EAB800C03A14 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D28CA5A82054EB2C00C03A14 /* tableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tableViewController.swift; sourceTree = "<group>"; };
 		D28CA5AA2054EC2600C03A14 /* MainTableView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainTableView.storyboard; sourceTree = "<group>"; };
+		D28CA5AC2055031400C03A14 /* DisplayFpsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayFpsViewController.swift; sourceTree = "<group>"; };
+		D28CA5B220550B9E00C03A14 /* fpsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fpsCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,9 +84,11 @@
 				D28CA5882054EAB800C03A14 /* AppDelegate.swift */,
 				D28CA5AA2054EC2600C03A14 /* MainTableView.storyboard */,
 				D28CA5A82054EB2C00C03A14 /* tableViewController.swift */,
+				D28CA5AC2055031400C03A14 /* DisplayFpsViewController.swift */,
 				D28CA58F2054EAB800C03A14 /* Assets.xcassets */,
 				D28CA5912054EAB800C03A14 /* LaunchScreen.storyboard */,
 				D28CA5942054EAB800C03A14 /* Info.plist */,
+				D28CA5B220550B9E00C03A14 /* fpsCell.swift */,
 			);
 			path = tableView;
 			sourceTree = "<group>";
@@ -200,6 +206,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				D28CA5892054EAB800C03A14 /* AppDelegate.swift in Sources */,
+				D28CA5B320550B9E00C03A14 /* fpsCell.swift in Sources */,
+				D28CA5AD2055031400C03A14 /* DisplayFpsViewController.swift in Sources */,
 				D28CA5A92054EB2C00C03A14 /* tableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
