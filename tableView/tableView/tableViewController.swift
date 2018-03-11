@@ -23,6 +23,8 @@ class tableViewController: UITableViewController {
         let current_game = fps_game[indexPath.row]
         //we actually know cell will be there, so it is good for us to force wrapping it
         let cell = tableView.dequeueReusableCell(withIdentifier: "fpsCell")!
+        //if we do "let cell = UITableView()" it works, but it will create new instance everytime
+        
         cell.textLabel?.text = current_game
         
         return cell //the cell has been wrapped, so it can be returned as a UITableViewCell
