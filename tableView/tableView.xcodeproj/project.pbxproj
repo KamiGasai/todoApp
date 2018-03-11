@@ -8,11 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		D28CA5892054EAB800C03A14 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D28CA5882054EAB800C03A14 /* AppDelegate.swift */; };
-		D28CA58B2054EAB800C03A14 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D28CA58A2054EAB800C03A14 /* ViewController.swift */; };
-		D28CA58E2054EAB800C03A14 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D28CA58C2054EAB800C03A14 /* Main.storyboard */; };
 		D28CA5902054EAB800C03A14 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D28CA58F2054EAB800C03A14 /* Assets.xcassets */; };
 		D28CA5932054EAB800C03A14 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D28CA5912054EAB800C03A14 /* LaunchScreen.storyboard */; };
 		D28CA59E2054EAB800C03A14 /* tableViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D28CA59D2054EAB800C03A14 /* tableViewTests.swift */; };
+		D28CA5A92054EB2C00C03A14 /* tableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D28CA5A82054EB2C00C03A14 /* tableViewController.swift */; };
+		D28CA5AB2054EC2600C03A14 /* MainTableView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D28CA5AA2054EC2600C03A14 /* MainTableView.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,14 +28,14 @@
 /* Begin PBXFileReference section */
 		D28CA5852054EAB800C03A14 /* tableView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tableView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D28CA5882054EAB800C03A14 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D28CA58A2054EAB800C03A14 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		D28CA58D2054EAB800C03A14 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D28CA58F2054EAB800C03A14 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D28CA5922054EAB800C03A14 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D28CA5942054EAB800C03A14 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D28CA5992054EAB800C03A14 /* tableViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = tableViewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D28CA59D2054EAB800C03A14 /* tableViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tableViewTests.swift; sourceTree = "<group>"; };
 		D28CA59F2054EAB800C03A14 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D28CA5A82054EB2C00C03A14 /* tableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tableViewController.swift; sourceTree = "<group>"; };
+		D28CA5AA2054EC2600C03A14 /* MainTableView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainTableView.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,8 +78,8 @@
 			isa = PBXGroup;
 			children = (
 				D28CA5882054EAB800C03A14 /* AppDelegate.swift */,
-				D28CA58A2054EAB800C03A14 /* ViewController.swift */,
-				D28CA58C2054EAB800C03A14 /* Main.storyboard */,
+				D28CA5AA2054EC2600C03A14 /* MainTableView.storyboard */,
+				D28CA5A82054EB2C00C03A14 /* tableViewController.swift */,
 				D28CA58F2054EAB800C03A14 /* Assets.xcassets */,
 				D28CA5912054EAB800C03A14 /* LaunchScreen.storyboard */,
 				D28CA5942054EAB800C03A14 /* Info.plist */,
@@ -181,7 +181,7 @@
 			files = (
 				D28CA5932054EAB800C03A14 /* LaunchScreen.storyboard in Resources */,
 				D28CA5902054EAB800C03A14 /* Assets.xcassets in Resources */,
-				D28CA58E2054EAB800C03A14 /* Main.storyboard in Resources */,
+				D28CA5AB2054EC2600C03A14 /* MainTableView.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -199,8 +199,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D28CA58B2054EAB800C03A14 /* ViewController.swift in Sources */,
 				D28CA5892054EAB800C03A14 /* AppDelegate.swift in Sources */,
+				D28CA5A92054EB2C00C03A14 /* tableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -223,14 +223,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		D28CA58C2054EAB800C03A14 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				D28CA58D2054EAB800C03A14 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		D28CA5912054EAB800C03A14 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
