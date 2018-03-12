@@ -19,11 +19,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <view key="tableFooterView" contentMode="scaleToFill" id="k8q-tj-MSS">
+                        <label key="tableFooterView" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="nG3-hk-uHn">
                             <rect key="frame" x="0.0" y="82" width="375" height="44"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        </view>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="fpsCell" rowHeight="54" id="PuQ-yJ-xyA" customClass="fpsCell" customModule="tableView" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="54"/>
@@ -57,6 +59,19 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="3Fp-Dz-hVX">
+                        <barButtonItem key="leftBarButtonItem" style="plain" id="ghu-72-zwS">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="e2P-2A-tFj">
+                                <rect key="frame" x="16" y="7" width="83" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                <state key="normal" title="✔️">
+                                    <color key="titleColor" red="0.345699125" green="0.70713101" blue="0.99542584199999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="detail:" destination="kBp-d5-su6" eventType="touchUpInside" id="QRm-iO-Khy"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="+" id="wa8-H4-74W">
                             <connections>
                                 <action selector="add:" destination="kBp-d5-su6" id="7v7-Pw-ojX"/>
@@ -64,6 +79,8 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="detailButtonTitle" destination="e2P-2A-tFj" id="nqS-JP-lM6"/>
+                        <outlet property="message" destination="nG3-hk-uHn" id="UuD-PM-U74"/>
                         <segue destination="ziW-Td-oz9" kind="show" identifier="fpsTransition" id="IJS-kk-qEG"/>
                     </connections>
                 </tableViewController>

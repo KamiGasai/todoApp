@@ -10,10 +10,9 @@ import UIKit
 
 
 class tableViewController: UITableViewController {
-    
+    var checkDetail: Int = 0
     var fps_game: [String] = ["Counter Strike", "Rainbow Six Siege", "PUBG"]
     var selected: String?
-    var checked: [Int] = [0,0,0]
     
     
     //this method return the length of the array, indicates how many elements in our array (are going to be shown)
@@ -21,7 +20,24 @@ class tableViewController: UITableViewController {
         return fps_game.count
     }
    
+    @IBOutlet weak var message: UILabel!
     
+    @IBOutlet weak var detailButtonTitle: UIButton!
+    
+    @IBAction func detail(_ sender: UIButton) {
+        if checkDetail != 1 {
+            detailButtonTitle.setTitle("Done", for: .normal)
+            detailButtonTitle.setTitleColor(UIColor.red, for: .normal)
+            message.text = "Click Done to finish placing checkmark"
+            message.textColor = UIColor.red
+            
+            checkDetail = 1
+        } else {
+            checkDetail = 0
+            detailButtonTitle.setTitle("✔️", for: .normal)
+            message.text = ""
+        }
+    }
     
     @IBAction func add(_ sender: Any) {
         showInputDialog()
@@ -75,13 +91,15 @@ class tableViewController: UITableViewController {
         selected = fps_game[indexPath.row]
         
         //segue name: fpsTransition. When we select the row, we want to transit to new view controller
-        performSegue(withIdentifier: "fpsTransition", sender: self)
+        if checkDetail != 1 {
+            performSegue(withIdentifier: "fpsTransition", sender: self)
+        } else {
         if tableView.cellForRow(at: indexPath)?.accessoryType != UITableViewCellAccessoryType.checkmark {
             tableView.cellForRow(at: indexPath)?.accessoryType = UITableViewCellAccessoryType.checkmark
         } else {
             tableView.cellForRow(at: indexPath)?.accessoryType = UITableViewCellAccessoryType.none
         }
-        
+        }
     }
     
     override func prepare(for segue:UIStoryboardSegue, sender:Any?) {
