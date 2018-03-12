@@ -24,9 +24,32 @@ class tableViewController: UITableViewController {
     
     
     @IBAction func add(_ sender: Any) {
-        fps_game.append("NEW GAME")
-        tableView.reloadData()
+        showInputDialog()
     }
+    func showInputDialog() {
+        let alertController = UIAlertController(title: "New Game", message: "Please enter the name of new game", preferredStyle: .alert)
+        let confirmAction = UIAlertAction(title: "Enter", style: .default) { (_) in
+            
+            //getting the input values from user
+            let name = alertController.textFields?[0].text
+            if name != nil {
+                self.fps_game.append(name!)
+                self.tableView.reloadData()
+            }
+        }
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel) { (_) in }
+        
+        alertController.addTextField { (textField) in
+            textField.placeholder = "Try \"Destiny\""
+        }
+        alertController.addAction(confirmAction)
+        alertController.addAction(cancelAction)
+        
+        //finally presenting the dialog box
+        self.present(alertController, animated: true, completion: nil)
+
+    }
+    
     
     
     
