@@ -11,7 +11,7 @@ import UIKit
 class fpsCell: UITableViewCell {
     
     @IBOutlet weak var icon: UIImageView!
-    
+
     var game: String? {
         didSet {
             if let game = game {
@@ -20,5 +20,4 @@ class fpsCell: UITableViewCell {
             }
         }
     }
-    
 }

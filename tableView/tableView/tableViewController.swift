@@ -13,7 +13,7 @@ class tableViewController: UITableViewController {
     
     var fps_game: [String] = ["Counter Strike", "Rainbow Six Siege", "PUBG"]
     var selected: String?
-    
+    var checked: [Int] = [0,0,0]
     
     
     //this method return the length of the array, indicates how many elements in our array (are going to be shown)
@@ -57,14 +57,12 @@ class tableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 
         let current_game = fps_game[indexPath.row]
-        
         let cell = tableView.dequeueReusableCell(withIdentifier: "fpsCell") as! fpsCell
         ////we actually know cell will be there, so it is good for us to force wrapping it
         //if we do "let cell = UITableView()" it works, but it will create new instance everytime
         
         cell.textLabel?.text = current_game
         cell.game = current_game
-        
         return cell //the cell has been wrapped, so it can be returned as a UITableViewCell
     }
     
@@ -78,6 +76,12 @@ class tableViewController: UITableViewController {
         
         //segue name: fpsTransition. When we select the row, we want to transit to new view controller
         performSegue(withIdentifier: "fpsTransition", sender: self)
+        if tableView.cellForRow(at: indexPath)?.accessoryType != UITableViewCellAccessoryType.checkmark {
+            tableView.cellForRow(at: indexPath)?.accessoryType = UITableViewCellAccessoryType.checkmark
+        } else {
+            tableView.cellForRow(at: indexPath)?.accessoryType = UITableViewCellAccessoryType.none
+        }
+        
     }
     
     override func prepare(for segue:UIStoryboardSegue, sender:Any?) {
