@@ -15,6 +15,7 @@
 		D28CA5AB2054EC2600C03A14 /* MainTableView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D28CA5AA2054EC2600C03A14 /* MainTableView.storyboard */; };
 		D28CA5AD2055031400C03A14 /* DisplayFpsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D28CA5AC2055031400C03A14 /* DisplayFpsViewController.swift */; };
 		D28CA5B320550B9E00C03A14 /* fpsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D28CA5B220550B9E00C03A14 /* fpsCell.swift */; };
+		D2E36B662057D5AD00B91D79 /* fpsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E36B652057D5AD00B91D79 /* fpsModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,7 @@
 		D28CA5AA2054EC2600C03A14 /* MainTableView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainTableView.storyboard; sourceTree = "<group>"; };
 		D28CA5AC2055031400C03A14 /* DisplayFpsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayFpsViewController.swift; sourceTree = "<group>"; };
 		D28CA5B220550B9E00C03A14 /* fpsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fpsCell.swift; sourceTree = "<group>"; };
+		D2E36B652057D5AD00B91D79 /* fpsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fpsModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +86,7 @@
 				D28CA5882054EAB800C03A14 /* AppDelegate.swift */,
 				D28CA5AA2054EC2600C03A14 /* MainTableView.storyboard */,
 				D28CA5A82054EB2C00C03A14 /* tableViewController.swift */,
+				D2E36B652057D5AD00B91D79 /* fpsModel.swift */,
 				D28CA5AC2055031400C03A14 /* DisplayFpsViewController.swift */,
 				D28CA58F2054EAB800C03A14 /* Assets.xcassets */,
 				D28CA5912054EAB800C03A14 /* LaunchScreen.storyboard */,
@@ -207,6 +210,7 @@
 			files = (
 				D28CA5892054EAB800C03A14 /* AppDelegate.swift in Sources */,
 				D28CA5B320550B9E00C03A14 /* fpsCell.swift in Sources */,
+				D2E36B662057D5AD00B91D79 /* fpsModel.swift in Sources */,
 				D28CA5AD2055031400C03A14 /* DisplayFpsViewController.swift in Sources */,
 				D28CA5A92054EB2C00C03A14 /* tableViewController.swift in Sources */,
 			);

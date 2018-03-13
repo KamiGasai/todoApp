@@ -7,6 +7,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -19,7 +20,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <label key="tableFooterView" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="nG3-hk-uHn">
+                        <label key="tableFooterView" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="nG3-hk-uHn">
                             <rect key="frame" x="0.0" y="82" width="375" height="44"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -58,26 +59,40 @@
                             <outlet property="delegate" destination="kBp-d5-su6" id="bqf-Xb-q6G"/>
                         </connections>
                     </tableView>
+                    <toolbarItems/>
                     <navigationItem key="navigationItem" id="3Fp-Dz-hVX">
-                        <barButtonItem key="leftBarButtonItem" style="plain" id="ghu-72-zwS">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="e2P-2A-tFj">
+                        <barButtonItem key="leftBarButtonItem" style="plain" id="PO3-L4-bfP">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="gWk-s4-j9V">
                                 <rect key="frame" x="16" y="7" width="83" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                                <state key="normal" title="✔️">
-                                    <color key="titleColor" red="0.345699125" green="0.70713101" blue="0.99542584199999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
+                                <state key="normal" title="Edit"/>
                                 <connections>
-                                    <action selector="detail:" destination="kBp-d5-su6" eventType="touchUpInside" id="QRm-iO-Khy"/>
+                                    <action selector="edit:" destination="kBp-d5-su6" eventType="touchUpInside" id="y06-gF-8GY"/>
                                 </connections>
                             </button>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="+" id="wa8-H4-74W">
-                            <connections>
-                                <action selector="add:" destination="kBp-d5-su6" id="7v7-Pw-ojX"/>
-                            </connections>
-                        </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem title="+" id="wa8-H4-74W">
+                                <connections>
+                                    <action selector="add:" destination="kBp-d5-su6" id="7v7-Pw-ojX"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem style="plain" id="ghu-72-zwS">
+                                <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="e2P-2A-tFj">
+                                    <rect key="frame" x="310" y="7" width="30" height="30"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                    <state key="normal" title="✔️">
+                                        <color key="titleColor" red="0.345699125" green="0.70713101" blue="0.99542584199999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="detail:" destination="kBp-d5-su6" eventType="touchUpInside" id="QRm-iO-Khy"/>
+                                    </connections>
+                                </button>
+                            </barButtonItem>
+                        </rightBarButtonItems>
                     </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="detailButtonTitle" destination="e2P-2A-tFj" id="nqS-JP-lM6"/>
                         <outlet property="message" destination="nG3-hk-uHn" id="UuD-PM-U74"/>
