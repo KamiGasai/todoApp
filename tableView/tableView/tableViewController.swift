@@ -14,7 +14,6 @@ class tableViewController: UITableViewController {
 //    var fps_game: [String] = ["Counter Strike", "Rainbow Six Siege", "PUBG"]
     var selected: String?
     var game = fpsModel()
-    var finishAdd: Int = 0
     
 
     
@@ -48,11 +47,6 @@ class tableViewController: UITableViewController {
             message.text = ""
         }
     }
-    
-    func adding() {
-        
-    }
-
     
     
     @IBAction func add(_ sender: Any) {
