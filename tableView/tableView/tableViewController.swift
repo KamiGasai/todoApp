@@ -11,14 +11,14 @@ import UIKit
 
 class tableViewController: UITableViewController {
     var checkDetail: Int = 0
-//    var fps_game: [String] = ["Counter Strike", "Rainbow Six Siege", "PUBG"]
+    //    var fps_game: [String] = ["Counter Strike", "Rainbow Six Siege", "PUBG"]
     var selected: String?
     var game = fpsModel()
     
-
+    
     
     //this method return the length of the array, indicates how many elements in our array (are going to be shown)
-
+    
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if let counter = game.fps_game {
@@ -27,11 +27,11 @@ class tableViewController: UITableViewController {
             return 0
         }
     }
-   
+    
     @IBOutlet weak var message: UILabel!
     
     @IBOutlet weak var detailButtonTitle: UIButton!
-
+    
     
     @IBAction func detail(_ sender: UIButton) {
         if checkDetail != 1 {
@@ -82,7 +82,7 @@ class tableViewController: UITableViewController {
     
     //this method actually create(return) a cell (a view)
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-
+        
         let current_game = game.fps_game![indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: "fpsCell") as! fpsCell
         ////we actually know cell will be there, so it is good for us to force wrapping it
@@ -104,11 +104,11 @@ class tableViewController: UITableViewController {
         if checkDetail != 1 {
             performSegue(withIdentifier: "fpsTransition", sender: self)
         } else {
-        if tableView.cellForRow(at: indexPath)?.accessoryType != UITableViewCellAccessoryType.checkmark {
-            tableView.cellForRow(at: indexPath)?.accessoryType = UITableViewCellAccessoryType.checkmark
-        } else {
-            tableView.cellForRow(at: indexPath)?.accessoryType = UITableViewCellAccessoryType.none
-        }
+            if tableView.cellForRow(at: indexPath)?.accessoryType != UITableViewCellAccessoryType.checkmark {
+                tableView.cellForRow(at: indexPath)?.accessoryType = UITableViewCellAccessoryType.checkmark
+            } else {
+                tableView.cellForRow(at: indexPath)?.accessoryType = UITableViewCellAccessoryType.none
+            }
         }
     }
     
@@ -141,9 +141,9 @@ class tableViewController: UITableViewController {
     
     
     override func viewDidAppear(_ animated: Bool) {
-//        game.saveData()
+        //        game.saveData()
         game.loadData()
         tableView.reloadData()
     }
-
+    
 }

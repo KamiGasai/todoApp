@@ -10,6 +10,9 @@ import XCTest
 @testable import tableView
 
 class tableViewTests: XCTestCase {
+    
+    //NOTICE!!!!
+    // PLEASE MAKE SURE NO TASK IN APP IN YOUR SIMULATOR BEFORE UNIT TEST!!!!!
     let a = tableViewController()
     
     func testParameter() {
